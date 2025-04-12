@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="BISON Energy Drink - Premium kalitede enerji içeceği. Yüksek performans ve dayanıklılık için özel olarak formüle edilmiş.">
+    <meta name="keywords" content="BISON, enerji içeceği, enerji, spor, performans, Türkiye, premium">
+    <meta name="author" content="BISON Energy Drink">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bisonenergydrink.com/">
+    <meta property="og:title" content="BISON Energy Drink - Premium Enerji İçeceği">
+    <meta property="og:description" content="BISON Energy Drink - Yüksek performans ve dayanıklılık için özel olarak formüle edilmiş premium enerji içeceği.">
+    <meta property="og:image" content="https://bisonenergydrink.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bisonenergydrink.com/">
+    <meta property="twitter:title" content="BISON Energy Drink - Premium Enerji İçeceği">
+    <meta property="twitter:description" content="BISON Energy Drink - Yüksek performans ve dayanıklılık için özel olarak formüle edilmiş premium enerji içeceği.">
+    <meta property="twitter:image" content="https://bisonenergydrink.com/images/twitter-image.jpg">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="images/logo.png" as="image">
+    
+    <title>BISON Energy Drink - Premium Enerji İçeceği</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="lightning-container">
+        <div class="lightning"></div>
+        <div class="lightning"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison Logo" class="logo-icon">
+                    <span>MAYAR BISON</span>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active" data-translate="home">Ana Sayfa</a></li>
+                    <li><a href="#products" data-translate="products">Ürünler</a></li>
+                    <li><a href="#about" data-translate="about">Hakkımızda</a></li>
+                    <li><a href="contact.html" data-translate="contact">İletişim</a></li>
+                    <li class="language-selector">
+                        <button class="language-button">
+                            <img src="https://flagcdn.com/w20/tr.png" alt="Current Language" id="currentFlag">
+                            <span id="currentLang">TR</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <div class="language-option" data-lang="tr">
+                                <img src="https://flagcdn.com/w20/tr.png" alt="Turkish">
+                                <span>Türkçe</span>
+                            </div>
+                            <div class="language-option" data-lang="en">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="ar">
+                                <img src="https://flagcdn.com/w20/sa.png" alt="Arabic">
+                                <span>العربية</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="google_translate_element" style="display: none;"></div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <video class="hero-video" autoplay muted loop playsinline poster="images/bison-drink1.png">
+                <source src="images/mayar bison ad 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            <div class="energy-circle"></div>
+            <div class="energy-circle"></div>
+            <div class="energy-circle"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-translate="heroTitle">Canavarı Açığa Çıkar <span class="highlight" data-translate="heroHighlight">AÇIĞA ÇIKAR</span></h1>
+                <p class="hero-subtitle" data-translate="heroSubtitle">HIRSINI BESLE. GÜNÜNE HÜKMET.</p>
+                <div class="cta-buttons">
+                    <a href="#products" class="btn btn-primary" data-translate="exploreButton">LEZZETLERİ KEŞFET</a>
+                    <a href="#about" class="btn btn-secondary" data-translate="storyButton">HİKAYEMİZ</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title" data-translate="productsTitle">GÜCÜNÜ <span class="highlight">BESLE</span></h2>
+            <div class="product-grid">
+                <!-- Original Bison Products -->
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/bison-drink1.png" alt="BISON Original Front">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="bisonOriginal">MAYAR BISON Original</h3>
+                                <p class="product-tagline" data-translate="bisonOriginalDesc">EFSANE LEZZET</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="flipHint">Click to flip</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/bison-backoriginal.png" alt="BISON Original Back">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="bisonOriginal">MAYAR BISON Original</h3>
+                                <p class="product-tagline" data-translate="bisonOriginalDesc">EFSANE LEZZET</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card bison">
+                    <div class="product-image">
+                        <img src="images/bison-icecoffe.png" alt="BISON Blue">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="bisonIcedCoffee">BISON iced coffee</h3>
+                        <p class="product-tagline" data-translate="bisonIcedCoffeeDesc">Bold Energy, Smooth Taste</p>
+                    </div>
+                </div>
+
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/bison-v2.png" alt="BISON V2 Front">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="bisonV2">MAYAR BISON V2</h3>
+                                <p class="product-tagline" data-translate="doublePower">Double the Power</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="flipHint">Click to flip</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/bison-2faces.png" alt="BISON V2 Back">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="bisonV2">MAYAR BISON V2</h3>
+                                <p class="product-tagline" data-translate="unleashPower">Unleash Your Power</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malt Series Section -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text" data-translate="maltSeriesTitle">MALT SERIES</div>
+            </div>
+
+            <div class="product-grid malt-grid">
+                <div class="product-card malt">
+                    <div class="product-image">
+                        <img src="images/malt-bluewhite.png" alt="Blue Malt" class="zoomable-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="blueMalt">BLUE MALT</h3>
+                        <p class="product-tagline" data-translate="blueMaltDesc">COOL & CRISP</p>
+                    </div>
+                </div>
+
+                <div class="product-card malt">
+                    <div class="product-image">
+                        <img src="images/malt-greenapple.png" alt="Green Apple Malt" class="zoomable-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="greenAppleMalt">GREEN APPLE MALT</h3>
+                        <p class="product-tagline" data-translate="greenAppleMaltDesc">FRESH & NATURAL</p>
+                    </div>
+                </div>
+
+                <div class="product-card malt">
+                    <div class="product-image">
+                        <img src="images/malt-strawberry.png" alt="Strawberry Malt" class="zoomable-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="strawberryMalt">STRAWBERRY MALT</h3>
+                        <p class="product-tagline" data-translate="strawberryMaltDesc">SWEET & ENERGETIC</p>
+                    </div>
+                </div>
+
+                <div class="product-card malt">
+                    <div class="product-image">
+                        <img src="images/malt-pineapple.png" alt="Pineapple Malt" class="zoomable-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="pineappleMalt">PINEAPPLE MALT</h3>
+                        <p class="product-tagline" data-translate="pineappleMaltDesc">TROPICAL POWER</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other BISON Products Section -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text" data-translate="otherProductsTitle">OTHER BISON PRODUCTS</div>
+            </div>
+
+            <div class="product-grid other-products-grid">
+                <!-- BOOM Original -->
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/boomoriginal.png" alt="BOOM Original">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomOriginal">BOOM Original</h3>
+                                <p class="product-tagline" data-translate="boomOriginalDesc">Pure Energy</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="tapToRotate">Tap to rotate</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/boomoriginalar.png" alt="BOOM Original Arabic">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomOriginal">BOOM Original</h3>
+                                <p class="product-tagline" data-translate="boomOriginalDesc">Pure Energy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOOM Mango -->
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/boommango.png" alt="BOOM Mango">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomMango">BOOM Mango</h3>
+                                <p class="product-tagline" data-translate="boomMangoDesc">Tropical Power</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="tapToRotate">Tap to rotate</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/boommangoar.png" alt="BOOM Mango Arabic">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomMango">BOOM Mango</h3>
+                                <p class="product-tagline" data-translate="boomMangoDesc">Tropical Power</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOOM Pineapple -->
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/boompineapple.png" alt="BOOM Pineapple">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomPineapple">BOOM Pineapple</h3>
+                                <p class="product-tagline" data-translate="boomPineappleDesc">Tropical Blast</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="tapToRotate">Tap to rotate</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/boompineapplear.png" alt="BOOM Pineapple Arabic">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomPineapple">BOOM Pineapple</h3>
+                                <p class="product-tagline" data-translate="boomPineappleDesc">Tropical Blast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOOM Mojito -->
+                <div class="product-card flippable bison">
+                    <div class="product-card-inner">
+                        <div class="product-card-front">
+                            <div class="product-image">
+                                <img src="images/boommojito.png" alt="BOOM Mojito">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomMojito">BOOM Mojito</h3>
+                                <p class="product-tagline" data-translate="boomMojitoDesc">Fresh Mint Twist</p>
+                            </div>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-translate="tapToRotate">Tap to rotate</span>
+                            </div>
+                        </div>
+                        <div class="product-card-back">
+                            <div class="product-image">
+                                <img src="images/boommohitoar.png" alt="BOOM Mojito Arabic">
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="boomMojito">BOOM Mojito</h3>
+                                <p class="product-tagline" data-translate="boomMojitoDesc">Fresh Mint Twist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GORILLA -->
+                <div class="product-card bison">
+                    <div class="product-image">
+                        <img src="images/gorilla1.png" alt="GORILLA">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="gorilla">GORILLA</h3>
+                        <p class="product-tagline" data-translate="gorillaDesc">Raw Power</p>
+                    </div>
+                </div>
+
+                <div class="product-card bison">
+                    <div class="product-image">
+                        <img src="images/gorilla2.png" alt="GORILLA Back">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-translate="gorilla">GORILLA</h3>
+                        <p class="product-tagline">Mango Power</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">BISON <span class="highlight" data-translate="aboutTitle">HİKAYESİ</span></h2>
+                <div class="about-text">
+                    <p data-translate="aboutText">GÜÇLÜ BİZONUN RUHUNDAN DOĞAN ENERJİ İÇECEĞİ</p>
+                    <p data-translate="aboutStory" style="white-space: pre-line">Güçlü bizonun ruhundan doğan – güç, dayanıklılık ve durdurulamaz güç sembolü – enerji içeceğimiz bu aynı özellikleri taşıyor.
+
+BISON'u sınırları zorlayan, limitleri aşan ve kararlılıkla ilerleyen kişiler için yarattık.</p>
+                </div>
+                <div class="about-video">
+                    <video class="video-player" autoplay muted loop playsinline>
+                        <source src="images/MAYAR BISON ENERGY DRINK.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <span class="stat-number">2016</span>
+                        </div>
+                        <span class="stat-text" data-translate="establishment">KURULUŞ</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <span class="stat-number">13</span>
+                        </div>
+                        <span class="stat-text" data-translate="flavors">LEZZET</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <span class="stat-number">20+</span>
+                        </div>
+                        <span class="stat-text" data-translate="countries">ÜLKE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title"><span data-translate="followUsTitle">BİZİ TAKİP ET</span></h2>
+            <p class="section-subtitle" data-translate="followUsSubtitle">EN YENİ DUYURULAR VE ÖZEL İÇERİKLER İÇİN SOSYAL MEDYADA BİZİMLE OLUN</p>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/mayarbison/" target="_blank" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>INSTAGRAM</h3>
+                    <p data-translate="dailyContent">GÜNLÜK İÇERİK</p>
+                </a>
+                <a href="#" class="social-card tiktok">
+                    <div class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h3>TIKTOK</h3>
+                    <p data-translate="trendingVideos">TREND VİDEOLAR</p>
+                </a>
+                <a href="https://www.youtube.com/channel/UCmXKjaO2s3gtvJSO9Z1aiVw" target="_blank" class="social-card youtube">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YOUTUBE</h3>
+                    <p data-translate="ourVideos">VİDEOLARIMIZ</p>
+                </a>
+                <a href="https://www.linkedin.com/company/mayarbison/?originalSubdomain=tr" target="_blank" class="social-card linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LINKEDIN</h3>
+                    <p data-translate="corporate">KURUMSAL</p>
+                </a>
+                <a href="https://x.com/mayarbison" target="_blank" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <h3>X</h3>
+                    <p data-translate="updates">GÜNCELLEMELER</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison Logo" class="logo-icon large">
+                    <h3>BISON ENERJİ</h3>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4 data-translate="menu">MENÜ</h4>
+                            <ul>
+                                <li><a href="#home" data-translate="home">ANA SAYFA</a></li>
+                                <li><a href="#products" data-translate="products">ÜRÜNLER</a></li>
+                                <li><a href="#about" data-translate="about">HAKKIMIZDA</a></li>
+                                <li><a href="#contact" data-translate="contact">İLETİŞİM</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4 data-translate="legal">YASAL</h4>
+                            <ul>
+                                <li><a href="#" data-translate="privacyPolicy">GİZLİLİK POLİTİKASI</a></li>
+                                <li><a href="#" data-translate="termsOfUse">KULLANIM KOŞULLARI</a></li>
+                                <li><a href="#" data-translate="nutritionalValues">BESİN DEĞERLERİ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.721363476272!2d34.536709699999996!3d36.753258699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278bd42b71fe67%3A0xb78666e8bf33578!2sMAYAR%20BISON!5e0!3m2!1str!2str!4v1742699311402!5m2!1str!2str" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="address-info">
+                            <h4 data-translate="address">ADRES</h4>
+                            <p>MAYAR BISON</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="copyright">&copy; 2016 BISON ENERJİ İÇECEĞİ. TÜM HAKLARI SAKLIDIR.</p>
+                <p class="disclaimer" data-translate="disclaimer">LÜTFEN SORUMLU TÜKETİN. ÇOCUKLAR, HAMİLE KADINLAR VEYA KAFEİNE DUYARLI KİŞİLER İÇİN ÖNERİLMEZ.</p>
+                <div class="developer-credit">
+                    <img src="images/fanarilabs.png" alt="Fanari Labs Logo" class="dev-logo">
+                    <a href="#" class="dev-link" id="devContact" data-translate="developedBy">Fanari Labs tarafından üretilmiştir. İletişime geçmek için lütfen tıklayın.</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div class="contact-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <div class="popup-header">
+                <img src="images/fanari-labs-logo.png" alt="Fanari Labs Logo" class="popup-logo">
+                <h3>Fanari Labs</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@fanarilabs.com">fanarilabs@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+905379295163">+90 537 929 51 63</a>
+                </div>
+                <div class="contact-item whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/905379295163" target="_blank">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div class="image-zoom-modal" id="imageZoomModal">
+        <div class="zoom-content">
+            <img src="" alt="" class="zoomed-image" id="zoomedImage">
+            <div class="close-zoom">&times;</div>
+        </div>
+    </div>
+
+    <!-- Developer Contact Popup -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="popup-content">
+            <button class="close-popup" aria-label="Close popup">&times;</button>
+            <div class="popup-header">
+                <img src="images/fanarilabs.png" alt="Fanari Labs Logo" class="popup-logo">
+                <h3>Contact Fanari Labs</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:fanarilabs@gmail.com">fanarilabs@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+905379295163">+90 537 929 51 63</a>
+                </div>
+                <div class="contact-item whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/905379295163" target="_blank">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load translations first -->
+    <script src="js/translations.js"></script>
+    <!-- Then load main script -->
+    <script src="script.js"></script>
+    <script>
+        // Save the current language in localStorage
+        let currentLang = localStorage.getItem('language') || 'tr';
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    </script>
+    <a href="https://wa.me/905325128335" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

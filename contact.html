@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - MAYAR BISON</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="lightning-container">
+        <div class="lightning"></div>
+        <div class="lightning"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison Logo" class="logo-icon">
+                    <span>MAYAR BISON</span>
+                </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-translate="home">Ana Sayfa</a></li>
+                    <li><a href="index.html#products" data-translate="products">Ürünler</a></li>
+                    <li><a href="index.html#about" data-translate="about">Hakkımızda</a></li>
+                    <li><a href="contact.html" class="active" data-translate="contact">İletişim</a></li>
+                    <li class="language-selector">
+                        <button class="language-button">
+                            <img src="https://flagcdn.com/w20/tr.png" alt="Current Language" id="currentFlag">
+                            <span id="currentLang">TR</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <div class="language-option" data-lang="tr">
+                                <img src="https://flagcdn.com/w20/tr.png" alt="Turkish">
+                                <span>Türkçe</span>
+                            </div>
+                            <div class="language-option" data-lang="en">
+                                <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="ar">
+                                <img src="https://flagcdn.com/w20/sa.png" alt="Arabic">
+                                <span>العربية</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div id="google_translate_element" style="display: none;"></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-page">
+        <div class="container">
+            <h1 class="section-title"><span class="highlight" data-translate="contact">İLETİŞİM</span></h1>
+            
+            <div class="contact-grid">
+                <!-- Contact Information Card -->
+                <div class="contact-info-card">
+                    <div class="info-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h2 data-translate="contactInfo">İLETİŞİM BİLGİLERİ</h2>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="info-text">
+                                <h3 data-translate="phone">Telefon</h3>
+                                <div class="phone-numbers">
+                                    <a href="tel:+902122123456">+90 212 212 34 56</a>
+                                    <a href="tel:+905324402077">+90 532 440 20 77</a>
+                                    <a href="tel:+905324402077">+90 532 440 20 77</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info-text">
+                                <h3 data-translate="email">E-posta</h3>
+                                <a href="mailto:info@mayarbison.com">info@mayarbison.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-text">
+                                <h3 data-translate="address">Adres</h3>
+                                <p data-translate="addressText">mersin, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Card -->
+                <div class="contact-map-card">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.721363476272!2d34.536709699999996!3d36.753258699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278bd42b71fe67%3A0xb78666e8bf33578!2sMAYAR%20BISON!5e0!3m2!1str!2str!4v1742699311402!5m2!1str!2str" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="social-media-section">
+                <h2 class="section-subtitle" data-translate="followUsTitle">SOSYAL MEDYADA BİZİ TAKİP EDİN</h2>
+                <div class="social-grid">
+                    <a href="https://www.instagram.com/mayarbison/" target="_blank" class="social-card instagram">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>INSTAGRAM</h3>
+                        <p data-translate="dailyContent">GÜNLÜK İÇERİK</p>
+                    </a>
+                    <a href="#" class="social-card tiktok">
+                        <div class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3>TIKTOK</h3>
+                        <p data-translate="trendingVideos">TREND VİDEOLAR</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCmXKjaO2s3gtvJSO9Z1aiVw" target="_blank" class="social-card youtube">
+                        <div class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>YOUTUBE</h3>
+                        <p data-translate="ourVideos">VİDEOLARIMIZ</p>
+                    </a>
+                    <a href="https://www.linkedin.com/company/mayarbison/?originalSubdomain=tr" target="_blank" class="social-card linkedin">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h3>LINKEDIN</h3>
+                        <p data-translate="corporate">KURUMSAL</p>
+                    </a>
+                    <a href="https://x.com/mayarbison" target="_blank" class="social-card twitter">
+                        <div class="social-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <h3>X</h3>
+                        <p data-translate="updates">GÜNCELLEMELER</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison Logo" class="logo-icon large">
+                    <h3>BISON ENERJİ</h3>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4 data-translate="menu">MENÜ</h4>
+                            <ul>
+                                <li><a href="index.html" data-translate="home">ANA SAYFA</a></li>
+                                <li><a href="index.html#products" data-translate="products">ÜRÜNLER</a></li>
+                                <li><a href="index.html#about" data-translate="about">HAKKIMIZDA</a></li>
+                                <li><a href="contact.html" data-translate="contact">İLETİŞİM</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="copyright">&copy; 2016 BISON ENERJİ İÇECEĞİ. TÜM HAKLARI SAKLIDIR.</p>
+                <p class="disclaimer" data-translate="disclaimer">LÜTFEN SORUMLU TÜKETİN. ÇOCUKLAR, HAMİLE KADINLAR VEYA KAFEİNE DUYARLI KİŞİLER İÇİN ÖNERİLMEZ.</p>
+                <div class="developer-credit">
+                    <img src="images/fanarilabs.png" alt="Fanari Labs Logo" class="dev-logo">
+                    <a href="#" class="dev-link" id="devContact" data-translate="developedBy">Fanari Labs tarafından üretilmiştir. İletişime geçmek için lütfen tıklayın.</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Popup -->
+    <div class="contact-popup" id="contactPopup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <div class="popup-header">
+                <img src="images/fanarilabs.png" alt="Fanari Labs Logo" class="popup-logo">
+                <h3>Fanari Labs</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+905379295163">+90 537 929 51 63</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:amir.f.fanari@gmail.com">fanarilabs@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load translations first -->
+    <script src="js/translations.js"></script>
+    <!-- Then load main script -->
+    <script src="script.js"></script>
+    <script>
+        // Save the current language in localStorage
+        let currentLang = localStorage.getItem('language') || 'tr';
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    </script>
+    <a href="https://wa.me/905325128335" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html> 
