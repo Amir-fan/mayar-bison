@@ -61,4 +61,33 @@ document.querySelectorAll('.nav-link').forEach(link => {
         mobileMenu.classList.remove('active');
         navLinks.classList.remove('active');
     });
+});
+
+// Mobile Performance Optimizations
+document.addEventListener('DOMContentLoaded', () => {
+    // Lazy load videos on mobile
+    const videos = document.querySelectorAll('video');
+    if (window.innerWidth <= 768) {
+        videos.forEach(video => {
+            video.setAttribute('preload', 'none');
+            video.setAttribute('playsinline', '');
+            video.setAttribute('muted', '');
+        });
+    }
+
+    // Optimize scroll performance
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                // Add any scroll-based animations here
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Optimize touch events
+    document.addEventListener('touchstart', () => {}, { passive: true });
+    document.addEventListener('touchmove', () => {}, { passive: true });
 }); 
