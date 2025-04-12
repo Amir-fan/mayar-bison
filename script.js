@@ -23,64 +23,76 @@ document.addEventListener('DOMContentLoaded', function() {
         loaderProgress.style.width = `${progress}%`;
     }, 200);
     
-    // Mobile menu toggle with improved touch handling
-    const mobileMenu = document.querySelector('.menu-toggle');
+    // Mobile menu functionality
+    const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
 
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+    if (menuToggle && navMenu) {
+        // Toggle menu
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.remove('active');
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
-                document.body.style.overflow = '';
+                body.style.overflow = '';
             }
         });
-    }
 
-    // Scroll event for header
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    // Subscription form handling
-    const subscribeForm = document.getElementById('subscribe-form');
-    const subscribeMessage = document.getElementById('subscribe-message');
-
-    if (subscribeForm) {
-        subscribeForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = this.querySelector('input[type="email"]').value;
-            
-            // Simulate form submission
-            subscribeMessage.textContent = 'CHARGING UP YOUR SUBSCRIPTION...';
-            subscribeMessage.style.color = 'var(--primary-blue)';
-            
-            setTimeout(function() {
-                subscribeMessage.textContent = `YOU'RE IN! WELCOME TO THE BISON STAMPEDE!`;
-                subscribeMessage.style.color = 'var(--primary-red)';
-                subscribeForm.reset();
-            }, 1500);
+        // Close menu when clicking a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.style.overflow = '';
+            });
         });
+
+        // Handle touch events for better mobile experience
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = touchEndX - touchStartX;
+
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                if (swipeDistance > 0 && navMenu.classList.contains('active')) {
+                    // Swipe right, close menu
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    body.style.overflow = '';
+                } else if (swipeDistance < 0 && !navMenu.classList.contains('active')) {
+                    // Swipe left, open menu
+                    menuToggle.classList.add('active');
+                    navMenu.classList.add('active');
+                    body.style.overflow = 'hidden';
+                }
+            }
+        }
     }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
@@ -183,36 +195,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Improved contact popup handling
     const devContact = document.querySelector('#devContact');
-    const contactPopup = document.querySelector('.contact-popup');
+    const contactPopup = document.querySelector('#contactPopup');
     const closePopup = document.querySelector('.close-popup');
 
     if (devContact && contactPopup && closePopup) {
+        // Open popup
         devContact.addEventListener('click', (e) => {
             e.preventDefault();
             contactPopup.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
 
-        closePopup.addEventListener('click', (e) => {
+        // Close popup
+        const closePopupHandler = (e) => {
             e.stopPropagation();
             contactPopup.classList.remove('active');
             document.body.style.overflow = '';
-        });
+        };
 
+        // Close with button
+        closePopup.addEventListener('click', closePopupHandler);
+
+        // Close with click outside
         contactPopup.addEventListener('click', (e) => {
             if (e.target === contactPopup) {
-                contactPopup.classList.remove('active');
-                document.body.style.overflow = '';
+                closePopupHandler(e);
             }
         });
 
         // Close with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && contactPopup.classList.contains('active')) {
-                contactPopup.classList.remove('active');
-                document.body.style.overflow = '';
+                closePopupHandler(e);
             }
         });
+
+        // Prevent scrolling when popup is open
+        contactPopup.addEventListener('wheel', (e) => {
+            if (contactPopup.classList.contains('active')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     }
 
     // Optimize image loading
@@ -428,6 +451,48 @@ document.addEventListener('DOMContentLoaded', function() {
     zoomModal.addEventListener('touchend', function() {
         touchStartY = null;
     }, { passive: true });
+
+    // Optimize scroll performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                scrollTimeout = null;
+                handleScroll();
+            }, 10);
+        }
+    }, { passive: true });
+
+    function handleScroll() {
+        const header = document.querySelector('header');
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    // Handle device orientation changes
+    window.addEventListener('orientationchange', () => {
+        // Reset any necessary styles or states
+        if (navMenu && menuToggle) {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+            body.style.overflow = '';
+        }
+    });
+
+    // Prevent zoom on double tap for iOS
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', (e) => {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            e.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, { passive: false });
 });
 
 function initializeLanguageSelector() {
