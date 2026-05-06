@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import heroBgImage from '../public/images/Gemini_Generated_Image_b4g7ub4g7ub4g7ub.png';
+const heroBgImage = '/images/Gemini_Generated_Image_b4g7ub4g7ub4g7ub.png';
 
 const dict = {
   en: {
