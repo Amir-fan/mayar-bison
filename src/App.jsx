@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-const heroBgImage = '/images/Gemini_Generated_Image_b4g7ub4g7ub4g7ub.png';
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
+const heroBgImage = publicAsset('images/Gemini_Generated_Image_b4g7ub4g7ub4g7ub.png');
 
 const dict = {
   en: {
@@ -238,7 +239,7 @@ function App() {
     <>
       <nav className={`navbar ${isMenuOpen ? 'menu-open' : ''}`}>
         <a href="#" className="nav-logo">
-          <img src="/images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison Logo" />
+          <img src={publicAsset('images/mayarbison_logo-removebg-preview (1).png')} alt="Mayar Bison Logo" />
         </a>
 
         <div className="nav-actions-mobile">
@@ -305,9 +306,9 @@ function App() {
           </div>
           <div className="product-grid" style={{ direction: 'ltr' }}>
             {[
-              { name: t.productNames.original, desc: t.products.original, img: '/images/bison-drink1.png' },
-              { name: t.productNames.icecoffee, desc: t.products.icecoffee, img: '/images/bison-icecoffe.png' },
-              { name: t.productNames.v2, desc: t.products.v2, img: '/images/bison-v2.png' }
+              { name: t.productNames.original, desc: t.products.original, img: publicAsset('images/bison-drink1.png') },
+              { name: t.productNames.icecoffee, desc: t.products.icecoffee, img: publicAsset('images/bison-icecoffe.png') },
+              { name: t.productNames.v2, desc: t.products.v2, img: publicAsset('images/bison-v2.png') }
             ].map((item, i) => (
               <div className="product-item" key={i}>
                 <div className="product-img-wrap"><img src={item.img} alt={item.name} className="product-can" /></div>
@@ -326,10 +327,10 @@ function App() {
           </div>
           <div className="product-grid" style={{ direction: 'ltr' }}>
             {[
-              { name: t.productNames.bluemalt, desc: t.products.bluemalt, img: '/images/malt-bluewhite.png' },
-              { name: t.productNames.greenapple, desc: t.products.greenapple, img: '/images/malt-greenapple.png' },
-              { name: t.productNames.strawberry, desc: t.products.strawberry, img: '/images/malt-strawberry.png' },
-              { name: t.productNames.pineapple, desc: t.products.pineapple, img: '/images/malt-pineapple.png' }
+              { name: t.productNames.bluemalt, desc: t.products.bluemalt, img: publicAsset('images/malt-bluewhite.png') },
+              { name: t.productNames.greenapple, desc: t.products.greenapple, img: publicAsset('images/malt-greenapple.png') },
+              { name: t.productNames.strawberry, desc: t.products.strawberry, img: publicAsset('images/malt-strawberry.png') },
+              { name: t.productNames.pineapple, desc: t.products.pineapple, img: publicAsset('images/malt-pineapple.png') }
             ].map((item, i) => (
               <div className="product-item" key={i}>
                 <div className="product-img-wrap"><img src={item.img} alt={item.name} className="product-can" /></div>
@@ -348,11 +349,11 @@ function App() {
           </div>
           <div className="product-grid" style={{ direction: 'ltr' }}>
             {[
-              { name: t.productNames.boomOrig, desc: t.products.boomOrig, img: '/images/boomoriginal.png' },
-              { name: t.productNames.boomMango, desc: t.products.boomMango, img: '/images/boommango.png' },
-              { name: t.productNames.boomMojito, desc: t.products.boomMojito, img: '/images/boommojito.png' },
-              { name: t.productNames.boomPine, desc: t.products.boomPine, img: '/images/boompineapple.png' },
-              { name: t.productNames.gorilla, desc: t.products.gorilla, img: '/images/gorilla1.png' }
+              { name: t.productNames.boomOrig, desc: t.products.boomOrig, img: publicAsset('images/boomoriginal.png') },
+              { name: t.productNames.boomMango, desc: t.products.boomMango, img: publicAsset('images/boommango.png') },
+              { name: t.productNames.boomMojito, desc: t.products.boomMojito, img: publicAsset('images/boommojito.png') },
+              { name: t.productNames.boomPine, desc: t.products.boomPine, img: publicAsset('images/boompineapple.png') },
+              { name: t.productNames.gorilla, desc: t.products.gorilla, img: publicAsset('images/gorilla1.png') }
             ].map((item, i) => (
               <div className="product-item" key={i}>
                 <div className="product-img-wrap"><img src={item.img} alt={item.name} className="product-can" /></div>
@@ -376,7 +377,7 @@ function App() {
             <div className="story-media">
               <div className="video-container">
                 <video autoPlay muted loop playsInline>
-                  <source src="/images/MAYAR BISON ENERGY DRINK.mp4" type="video/mp4" />
+                  <source src={publicAsset('images/MAYAR BISON ENERGY DRINK.mp4')} type="video/mp4" />
                 </video>
                 <div className="video-overlay"></div>
               </div>
@@ -426,7 +427,7 @@ function App() {
       <footer className="footer">
         <div className="footer-top">
           <div className="footer-col">
-            <img src="/images/mayarbison_logo-removebg-preview (1).png" alt="Mayar Bison" className="footer-logo-main" />
+            <img src={publicAsset('images/mayarbison_logo-removebg-preview (1).png')} alt="Mayar Bison" className="footer-logo-main" />
             <p className="footer-desc">{t.footerDesc}</p>
           </div>
           <div className="footer-col">
