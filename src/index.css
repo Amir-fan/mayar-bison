@@ -1048,10 +1048,36 @@ body {
   letter-spacing: 1px;
 }
 
+.dev-contact-phone a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.dev-contact-phone a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .dev-contact-text {
-  color: #ccc;
-  line-height: 1.8;
-  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dev-contact-link {
+  display: block;
+  color: #d7d7d7;
+  line-height: 1.5;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.dev-contact-link:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .dev-modal button {

@@ -465,8 +465,12 @@ function App() {
           <div className="dev-contact-info">
             <p className="dev-contact-phone"><a href="tel:+905379295163">+90 537 929 51 63</a></p>
             <p className="dev-contact-text">
-              <a href="https://fanarilabs.com" target="_blank" rel="noreferrer">fanarilabs.com</a>
-              <a href="mailto:fanarilabs@gmail.com">fanarilabs@gmail.com</a>
+              <a href="https://fanarilabs.com" target="_blank" rel="noreferrer" className="dev-contact-link">
+                fanarilabs.com
+              </a>
+              <a href="mailto:fanarilabs@gmail.com" className="dev-contact-link">
+                fanarilabs@gmail.com
+              </a>
             </p>
           </div>
           <button onClick={() => setShowDevModal(false)}>Close</button>
