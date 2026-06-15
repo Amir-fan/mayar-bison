@@ -34,6 +34,15 @@ const dict = {
     addressLabel: "Address",
     phoneLabel: "Phone",
     emailLabel: "Email",
+    companyName: "BISON GIDA İÇ VE DIŞ TİCARET LİMİTED ŞİRKETİ",
+    addressLine1: "MERKEZ 52005 SK. EN OFİS No:33 Kapı No:14",
+    addressLine2: "33000 Mezitli / Mersin / Türkiye",
+    taxOfficeLabel: "Tax Office",
+    taxOfficeValue: "İSTİKLAL VERGİ DAİRESİ MÜD.",
+    mersisLabel: "MERSIS NO",
+    mersisValue: "0168095201900001",
+    vatLabel: "VAT NO",
+    vatValue: "1680952019",
     
     footerDesc: "The meanest energy drink on the planet. Forged for those who refuse to settle. Present in over 20 countries.",
     footerExplore: "Explore",
@@ -102,6 +111,15 @@ const dict = {
     addressLabel: "Adres",
     phoneLabel: "Telefon",
     emailLabel: "E-posta",
+    companyName: "BISON GIDA İÇ VE DIŞ TİCARET LİMİTED ŞİRKETİ",
+    addressLine1: "MERKEZ 52005 SK. EN OFİS No:33 Kapı No:14",
+    addressLine2: "33000 Mezitli / Mersin / Türkiye",
+    taxOfficeLabel: "Vergi Dairesi",
+    taxOfficeValue: "İSTİKLAL VERGİ DAİRESİ MÜD.",
+    mersisLabel: "MERSİS NO",
+    mersisValue: "0168095201900001",
+    vatLabel: "Vergi No",
+    vatValue: "1680952019",
 
     footerDesc: "Gezegendeki en vahşi enerji içeceği. Yetinmeyi reddedenler için dövüldü. 20'den fazla ülkede.",
     footerExplore: "Keşfet",
@@ -170,6 +188,15 @@ const dict = {
     addressLabel: "العنوان",
     phoneLabel: "الهاتف",
     emailLabel: "البريد الإلكتروني",
+    companyName: "BISON GIDA İÇ VE DIŞ TİCARET LİMİTED ŞİRKETİ",
+    addressLine1: "MERKEZ 52005 SK. EN OFİS No:33 Kapı No:14",
+    addressLine2: "33000 Mezitli / Mersin / Türkiye",
+    taxOfficeLabel: "المكتب الضريبي",
+    taxOfficeValue: "İSTİKLAL VERGİ DAİRESİ MÜD.",
+    mersisLabel: "رقم ميرسيس",
+    mersisValue: "0168095201900001",
+    vatLabel: "الرقم الضريبي",
+    vatValue: "1680952019",
 
     footerDesc: "مشروب الطاقة الأشرس على وجه الأرض. صُنع لأولئك الذين يرفضون الاستسلام. متواجدون في أكثر من 20 دولة.",
     footerExplore: "استكشف",
@@ -396,7 +423,14 @@ function App() {
               <div className="info-card">
                 <span className="info-icon">📍</span>
                 <h3>{t.addressLabel}</h3>
-                <p>MAYAR BISON</p>
+                <p className="company-name">{t.companyName}</p>
+                <p className="address-detail">{t.addressLine1}</p>
+                <p className="address-detail">{t.addressLine2}</p>
+                <div className="company-meta">
+                  <p><span>{t.taxOfficeLabel}:</span> {t.taxOfficeValue}</p>
+                  <p><span>{t.mersisLabel}:</span> {t.mersisValue}</p>
+                  <p><span>{t.vatLabel}:</span> {t.vatValue}</p>
+                </div>
               </div>
               <div className="info-card">
                 <span className="info-icon">📞</span>
